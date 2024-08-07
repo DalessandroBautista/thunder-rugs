@@ -1,0 +1,23 @@
+{
+    "name": "Next.js & NestJS Dev Container",
+    "dockerFile": "Dockerfile",
+    "context": "..",
+    "workspaceFolder": "/workspace",
+    "extensions": [
+      "esbenp.prettier-vscode",
+      "dbaeumer.vscode-eslint",
+      "ms-azuretools.vscode-docker"
+    ],
+    "settings": {
+      "terminal.integrated.shell.linux": "/bin/bash"
+    },
+    "postCreateCommand": "npm install && npm run build",
+    "runArgs": [
+      "--network=host"
+    ],
+    "forwardPorts": [
+      3000,
+      3001
+    ]
+  }
+  
